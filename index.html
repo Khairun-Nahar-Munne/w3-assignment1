@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romm Rent</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Juneau Vacation Homes</title>
+    <link rel="stylesheet" href="css/style.css">
 
     <!--fontawsome cdn-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -26,7 +26,7 @@
                 <a href="#" class="nav-item">My trips</a>
                 <a href="#" class="nav-item">Sign in</a>
             </div>
-            <div class="user-icon"><i class="far fa-user"></i></div>
+            <div class="user-icon"><i class="fa-regular fa-circle-user"></i></div>
         </nav>
 
     </header>
@@ -34,15 +34,16 @@
     <!--main-->
     <main>
         <!--Banner section-->
-        <section>
+        <section class="banner">
 
             <!--banner-heading-->
             <div class="banner-head">
                 <a href="#" class="banner-head-item-1"><i class="fa-solid fa-arrow-left"></i>See all property</a>
                 <div class="banner-head-item-2">
                     <a href="#" class="banner-head-item banner-share"> <i
-                            class="fa-solid fa-arrow-up-from-bracket"></i>Share</a>
-                    <a href="#" class="banner-head-item banner-save"><i class="fa-regular fa-heart"></i>Save</a>
+                            class="fa-solid fa-arrow-up-from-bracket"></i><span>Share</span></a>
+                    <a href="#" class="banner-head-item banner-save"><i class="fa-regular fa-heart"></i><span>Save</span>
+                       </a>
                 </div>
 
             </div>
@@ -50,14 +51,20 @@
             <!--banner image-->
             <div class="gallery">
                 <div class="gallery-item gallery-main">
-                    <img src="images/img1.jpeg" alt="Lake view deck">
+                    <img src="images/img1.jpg" alt="Lake view deck">
+                </div>
+                <div class="gallery-item  gallery-item-last">
+                    <img src="images/img5.jpg" alt="House exterior">
+                </div>
+                <div class="gallery-item gallery-item-last">
+                    <img src="images/img3.jpg" alt=" Living room">
+                </div>
+                <div class="gallery-item gallery-item-last">
+                    <img src="images/img4.jpg" alt=" Living room">
                 </div>
                 <div class="gallery-item">
-                    <img src="/api/placeholder/400/300" alt="House exterior">
-                </div>
-                <div class="gallery-item">
-                    <img src="/api/placeholder/400/300" alt=" Living room">
-                    <div class="photo-count">30+</div>
+                    <img src="images/img2.jpg" alt=" Living room">
+                    <div class="photo-count"><i class="fa-regular fa-image"></i>30+</div>
                 </div>
     
                 <!-- Mobile view dots -->
@@ -73,6 +80,98 @@
 
             </div>
         </section>
+
+        <!--Information Section-->
+       <section>
+        <div class="info-nav">
+            <a href="#" class="active">Overview</a>
+            <a href="#">Amenities</a>
+            <a href="#">Policies</a>
+        </div>
+    
+        <div class="listing-type">Entire home</div>
+        <h1 class="listing-title">Juneau Vacation Home: Stunning View + Beach Access</h1>
+        
+        <div>
+            <span class="rating">9.8</span>
+            <a href="#" class="reviews">See all 24 reviews</a>
+        </div>
+    
+        <div class="info-content">
+            <div class="left-content">
+                <div class="property-details">
+                    <div class="detail-item">
+                        <span>2 bedrooms</span>
+                    </div>
+                    <div class="detail-item">
+                        <span>1 bathroom</span>
+                    </div>
+                    <div class="detail-item">
+                        <span>Sleeps 4</span>
+                    </div>
+                    <div class="detail-item">
+                        <span>1155 sq ft</span>
+                    </div>
+                </div>
+    
+                <div class="amenities">
+                    <h2>Popular amenities</h2>
+                    <div class="amenities-grid">
+                        <div class="detail-item">Barbecue grill</div>
+                        <div class="detail-item">Washer</div>
+                        <div class="detail-item">Outdoor Space</div>
+                        <div class="detail-item">Parking available</div>
+                        <div class="detail-item">Kitchen</div>
+                        <div class="detail-item">Dryer</div>
+                    </div>
+                </div>
+    
+                <div class="map-section">
+                    <h2>Explore the area</h2>
+                    <div class="map-container">
+                        <div style="background: #e0e0e0; width: 100%; height: 200px; border-radius: 12px;"><img src="images/img6.png" alt=""></div>
+                    </div>
+                    <ul class="location-list">
+                        <li class="location-item">
+                            <span>Auke Bay</span>
+                            <span>6 min drive</span>
+                        </li>
+                        <li class="location-item">
+                            <span>University of Alaska-Southeast</span>
+                            <span>10 min drive</span>
+                        </li>
+                        <li class="location-item">
+                            <span>Mendenhall Golf Course</span>
+                            <span>14 min drive</span>
+                        </li>
+                        <li class="location-item">
+                            <span>Juneau, AK (JNU-Juneau Intl.)</span>
+                            <span>14 min drive</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="booking-card">
+                <div class="price">$134 <span>per night</span></div>
+                <div class="date-picker">
+                    <input type="date" class="date-input" placeholder="Start date">
+                    <input type="date" class="date-input" placeholder="End date">
+                </div>
+                <input type="number" class="travelers-input" placeholder="2 travelers" min="1">
+                <div class="total">
+                    <p>Total: $543</p>
+                    <p>Total includes fees, not tax</p>
+                </div>
+                <button class="book-button">Book now</button>
+                <p style="text-align: center; color: #666;">You will not be charged yet</p>
+                <p style="text-align: center; margin-top: 20px;">
+                    <a href="#" style="color: #1264e3; text-decoration: none;">Contact host</a>
+                </p>
+                <p style="color: #666; margin-top: 20px;">Property # 9838104ha</p>
+            </div>
+        </div>
+       </section>
     </main>
 
     <!--footer-->
