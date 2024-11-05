@@ -322,6 +322,99 @@ nav {
 }
 
 
+/*room and bed details*/
+
+.room-details{
+    margin-bottom: 30px;
+}
+
+.room-details h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    margin-bottom: 16px;
+}
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr) ;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.room {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.room-name {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+
+.bed-info {
+    color: #666;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+
+}
+.bed-info span{
+
+    font-size: 18px;
+
+}
+
+
+.bed-icon::before {
+    content: '🛏️';
+    margin-right: 8px;
+}
+
+.bathroom {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+.bathroom p{
+    font-size: 15px;
+}
+
+.spaces-list {
+    list-style: none;
+}
+
+.space-item {
+    display: flex;
+    align-items: center;
+    padding: 3px 0;
+}
+.space-item p{
+    font-size: 13px;
+}
+
+.space-icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.room-details-link {
+    color: #006CE6;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.room-details-link:hover {
+    text-decoration: underline;
+}
+
+
     
 
 @media screen and (max-width: 768px) {
@@ -450,7 +543,7 @@ nav {
         background: white;
     }
 
-    /*inormation*/
+    /*inormation section*/
     .info-content {
         grid-template-columns: 1fr;
     }
@@ -467,5 +560,22 @@ nav {
 
     .listing-title {
         font-size: 1.5em;
+    }
+
+    /*room and bed details section*/
+    .rooms-grid {
+        grid-template-columns: repeat(3,1fr) ;
+    gap: 5px;
+    }
+
+    .room-details h2 {
+        font-size: 20px;
+    }
+
+    .room {
+        padding: 8px;
+    }
+    .space-item {
+        padding: 6px 0;
     }
 }
