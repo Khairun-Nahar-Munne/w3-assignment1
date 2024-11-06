@@ -862,10 +862,10 @@ nav {
     
 }
 .rules-head{
-    grid-column: 1/span 3;
+    grid-column: 1/span 5;
 }
 .rules-content{
-    grid-column: 4/span 7;
+    grid-column: 6/span 12;
     padding-top:8px;
 }
 .check-times {
@@ -954,81 +954,88 @@ nav {
 /* timeline bar*/
 
 .timeline-container {
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 30px;
+   
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .timeline-header {
-    position: relative;
-    padding-bottom: 50px;
-}
-
-.timeline-track {
-    position: relative;
-    height: 4px;
-    background: #eee;
-    border-radius: 2px;
-}
-
-.timeline-progress {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    background: linear-gradient(90deg, #2563eb, #3b82f6);
-    border-radius: 2px;
-    transition: width 0.3s ease;
-}
-
-.timeline-points {
-    position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6;
+}
+.today{
+    margin-top: -10px;
+}
+
+.timeline {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
     justify-content: space-between;
-    margin-bottom: -14px;
 }
 
-.point {
-    position: relative;
-    z-index: 1;
+.marker {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
-    width: 80px;
+    gap: 5px;
 }
 
-.point::before {
-    content: '';
-    position: absolute;
-    bottom: -18px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 12px;
-    height: 12px;
+.circle {
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
-    background-color: white;
-    border: 3px solid #e5e7eb;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 0 4px white;
+    background-color: #d1d5db;
+    border: 2px solid #d1d5db;
+    margin-top: 30px;
 }
 
-.point.active::before {
-    border-color: #2563eb;
-    background-color: #2563eb;
+.circle.filled {
+    background-color: #1f2937;
+    border-color: #1f2937;
 }
 
-.point-label {
-    font-size: 0.875rem;
-    color: #6b7280;
-    margin-bottom: 8px;
-    font-weight: 500;
+.label {
+    font-size: 12px;
+    color: #374151;
 }
 
-.point.active .point-label {
-    color: #2563eb;
-    font-weight: 600;
+.line {
+    position: relative;
+    height: 2px;
+    background-color: #d1d5db;
+    width: 1100px;
+}
+
+.line.full-refund::before,
+.line.no-refund::before {
+    content: attr(data-label);
+ 
+   align-items: center;
+    position: absolute;
+    top: -20px;
+    font-size: 12px;
+    color: #374151;
+}
+
+.line.full-refund::before {
+    content: "Full refund";
+    left: -10px;
+    padding-left: 50px;
+}
+
+.line.no-refund::before {
+    content: "No refund";
+    right: -10px;
+    padding-right: 50px;
 }
 
 .refund-details {
@@ -1038,19 +1045,27 @@ nav {
 }
 
 .refund-period {
-    padding: 20px;
+   
     background-color: #f8fafc;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
+    display: flex;
+    gap:40px;
 }
 
 .period-label {
     font-size: 0.875rem;
     font-weight: 600;
-    color: #64748b;
-    text-transform: uppercase;
+    color: #171718;
+    display: flex;
+    flex-direction: column;
     letter-spacing: 0.05em;
     margin-bottom: 8px;
+    gap: 8px;
+}
+
+.period-label-date{
+    font-size: 1rem;
 }
 
 .refund-type {
@@ -1061,8 +1076,8 @@ nav {
 }
 
 .refund-description {
-    color: #64748b;
-    font-size: 0.9375rem;
+    color: #666;
+    font-size: 0.8rem;
     line-height: 1.6;
 }
 
@@ -1116,6 +1131,110 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+/*footer-banner-section*/
+
+.footer-reviews-container {
+ 
+    margin: 4rem auto 2rem;
+    padding: 0 1rem;
+}
+
+.footer-reviews-first-half{
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-rating-header {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-rating-number {
+    font-size: 2rem;
+    color: #087f5b;
+    font-weight: bold;
+}
+
+.footer-rating-text {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.footer-review-count {
+    color: #666;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.footer-review-count i {
+    font-size: 0.8rem;
+}
+
+.footer-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-review-card {
+ 
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.footer-review-rating {
+ 
+    margin-bottom: 0.5rem;
+}
+
+.footer-review-text {
+    color: #333;
+   
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.footer-review-text-bold{
+    font-weight: bold;
+}
+
+.footer-review-meta {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.read-more {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.see-all-footer-reviews {
+    display: inline-block;
+    text-decoration: none;
+    color: #1a73e8;
+    padding: 0.5rem 1rem;
+    border: 1px solid #1a73e8;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.see-all-reviews:hover {
+    background-color: #f8f9fa;
 }
 
 /*footer section*/
@@ -1464,7 +1583,55 @@ nav {
     .amenities-bar {
         font-size: 12px;
     }
+/* rulse section*/
+.timeline {
+    flex-direction: column;
+    width: auto;
+    padding: 20px;
+}
 
+.marker {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.circle {
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.line {
+    width: 2px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.line.full-refund::before,
+.line.no-refund::before {
+    top: -10px;
+    left: 20px;
+    transform: translateY(-50%);
+}
+    /*main-footer-banner section*/
+    .footer-reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-reviews-first-half{
+        display: flex; 
+        flex-direction: column;
+    }
+    .footer-rating-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-review-card {
+        margin-bottom: 1rem;
+    }
+    .footer-review-card:nth-child(2) {
+       display: none;
+    }
     /*footer-shared*/
     .host-section {
         display: grid;

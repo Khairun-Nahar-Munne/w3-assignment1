@@ -537,7 +537,7 @@
             </div>
             <div class="rules">
                 <div class="rules-head">
-                    <h1>Damage and <br>Incedents</h1>
+                    <h1>Damage and Incedents</h1>
                 </div>
                 <div class="rules-content">
                     <p>You will be responsible for any damage to the rental property caused by you or your party during
@@ -551,37 +551,41 @@
                 <div class="rules-content">
                     <div class="timeline-container">
                         <div class="timeline-header">
-                            <div class="timeline-points">
-                                <div class="point active">
-                                    <div class="point-label">Today</div>
+                            <div class="timeline">
+                                <div class="marker today">
+                                    <div class="circle filled"></div>
+                                    <span class="label">Today</span>
                                 </div>
-                                <div class="point">
-                                    <div class="point-label">Nov 4</div>
+                                <div class="line full-refund"></div>
+                                <div class="marker nov4">
+                                    <div class="circle"></div>
+                                    <span class="label">Nov 4</span>
                                 </div>
-                                <div class="point">
-                                    <div class="point-label">Check-in</div>
+                                <div class="line no-refund"></div>
+                                <div class="marker checkin">
+                                    <div class="circle"></div>
+                                    <span class="label">Check-in</span>
                                 </div>
-                            </div>
-                            <div class="timeline-track">
-                                <div class="timeline-progress"></div>
                             </div>
                         </div>
                 
                         <div class="refund-details">
                             <div class="refund-period">
-                                <div class="period-label">Before Nov 4</div>
-                                <div class="refund-type">Full refund</div>
-                                <div class="refund-description">
-                                    Cancel your reservation before Nov 4 at 11:59 PM, and you'll get a full refund. Times are based on the property's local time.
+                                <div class="period-label"><span>Before</span><span class="period-label-date">Nov 4</span></div>
+                                <div class="refund-type"> <span>Full refund</span>
+                                    <div class="refund-description">
+                                        Cancel your reservation before Nov 4 at 11:59 PM, and you'll get a full refund. Times are based on the property's local time.
+                                    </div>
                                 </div>
+                                
                             </div>
                 
                             <div class="refund-period">
-                                <div class="period-label">After Nov 4</div>
-                                <div class="refund-type">No refund</div>
-                                <div class="refund-description">
+                                <div class="period-label"><span>After</span><span class="period-label-date">Nov 4</span></div>
+                                <div class="refund-type"><span>No refund</span> <div class="refund-description">
                                     After that, you won't get a refund.
-                                </div>
+                                </div></div>
+                               
                             </div>
                         </div>
                     </div>
@@ -638,9 +642,53 @@
 
         <!--main footer banner-->
 
-        <div class="footer-banner">
+        <section class="footer-reviews-container">
+           <div class="footer-reviews-first-half">
+            <div class="footer-rating-header">
+                <div class="footer-rating-number">9.8/10</div>
+                <div class="footer-rating-text">Exceptional</div>
+                <div class="footer-review-count">
+                    24 reviews <i class="fas fa-info-circle"></i>
+                </div>
+                <p class="footer-review-text">Reviews are verified unless labeled otherwise</p>
+            </div>
+    
+            <div class="footer-reviews-main-grid">
+                <div class="footer-review-text footer-review-text-bold">Recent Reviews</div>
+                <div class="footer-reviews-grid">
+                    <div class="footer-review-card">
             
-        </div>
+                        <div class="footer-review-rating">10/10 Excellent</div>
+                        <p class="footer-review-text">A very cozy home for the two of us in a quiet area NW of town. Beautiful water view. We enjoyed the art, read up in it and visited the...</p>
+                        <a href="#" class="read-more">Read more</a>
+                        <div class="footer-review-meta">
+                            <span>Kyle G.</span>
+                            <span>Sep 25, 2024</span>
+                        </div>
+                        
+                    </div>
+        
+                    <div class="footer-review-card">
+                       
+                        <div class="footer-review-rating">10/10 Excellent</div>
+                        <p class="footer-review-text">The photos are just as the pictures and description state. Nice quiet area and great view of the...</p>
+                        <a href="#" class="read-more">Read more</a>
+                        <div class="footer-review-meta">
+                            <span>Cindy B.</span>
+                            <span>Sep 23, 2024</span>
+                        </div>
+                     
+                    </div>
+
+                </div>
+               
+            </div>
+           </div>
+    
+            <a href="#" class="see-all-footer-reviews">
+                See all 24 reviews <i class="fas fa-arrow-right"></i>
+            </a>
+        </section>
 
     </main>
 
