@@ -1302,14 +1302,23 @@ nav {
     /*inormation section*/
     .info-content {
         grid-template-columns: 1fr;
+        gap:0px;
     }
-
-
-
+    .booking-card-main{
+        
+        width:100%;
+        padding: 0px;
+        top:0px;
+        margin-bottom: 50px;
+    }
     .booking-card {
+        
+        width: 320px;
         position: static;
-        margin-top: 20px;
+        margin-top: 0px;
     }
+   
+    
 
     .listing-title {
         font-size: 1.5em;
@@ -1317,17 +1326,21 @@ nav {
 
     .map-div {
         flex-direction: column;
-        padding: 10px;
+        padding: 0px;
+        margin-bottom: 0px;
     }
 
     .map-container {
         height: 300px;
-        margin-bottom: 20px;
     }
 
     .map-info-container {
         flex-basis: auto;
-        text-align: center;
+        width:100%;
+    }
+    
+    .map-info-container br{
+        display: none;
     }
 
     .map h2 {
@@ -1337,7 +1350,7 @@ nav {
 
     .map-div {
         max-width: 1200px;
-        margin-bottom: 70px;
+        margin-bottom: 20px;
         padding: 20px 0px;
         display: flex;
         gap: 15px;
