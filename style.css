@@ -13,15 +13,15 @@ footer {
 
 /*navbar*/
 
-nav {
+header nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 1rem 2rem;
     background-color: #fff;
-    border-bottom: 1px solid #eeebeb;
+    border-bottom: 1px solid #868383;
     gap: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.108);
+    box-shadow: 0 2px 4px rgba(66, 40, 40, 0.108);
 
 }
 
@@ -90,7 +90,7 @@ nav {
     display: flex;
     gap: 0.5rem;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .banner-head-item-2 {
@@ -870,7 +870,7 @@ nav {
 }
 .check-times {
     display: flex;
-    gap:110px;
+    gap:200px;
     margin-bottom: 20px;
 }
 
@@ -1133,6 +1133,10 @@ nav {
     gap: 20px;
 }
 
+.freq-see{
+   padding-top: 30px;
+   display: none;
+}
 /*footer-banner-section*/
 
 .footer-reviews-container {
@@ -1223,12 +1227,13 @@ nav {
 }
 
 .see-all-footer-reviews {
+    margin-left: 270px;
     display: inline-block;
     text-decoration: none;
     color: #1a73e8;
     padding: 0.5rem 1rem;
-    border: 1px solid #1a73e8;
-    border-radius: 4px;
+    border: 1px solid #333;
+    border-radius: 13px;
     font-size: 0.9rem;
     transition: background-color 0.3s;
 }
@@ -1432,7 +1437,7 @@ nav {
     }
     .booking-card {
         
-        width: 320px;
+        width: 90%;
         position: static;
         margin-top: 0px;
     }
@@ -1583,6 +1588,11 @@ nav {
     .amenities-bar {
         font-size: 12px;
     }
+
+    .freq-see{
+        padding-top: 10px;
+        display: block;
+     }
 /* rulse section*/
 .timeline {
     flex-direction: column;
@@ -1593,10 +1603,12 @@ nav {
 .marker {
     flex-direction: row;
     justify-content: flex-start;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
+    margin-left: 45px;
 }
 
 .circle {
+    margin-top: 0px;
     margin-right: 10px;
     margin-bottom: 0;
 }
@@ -1606,13 +1618,23 @@ nav {
     height: 50px;
     margin: 0 auto;
 }
+.checkin{
+    margin-left: 60px;
+}
 
-.line.full-refund::before,
 .line.no-refund::before {
-    top: -10px;
-    left: 20px;
+    margin-top: 40px;
     transform: translateY(-50%);
 }
+    .line.full-refund::before{
+        margin-top: 40px;
+        margin-left: -130px;
+        transform: translateY(-50%);
+    }
+
+    .check-times{
+        gap:60px;
+    }
     /*main-footer-banner section*/
     .footer-reviews-grid {
         grid-template-columns: 1fr;
@@ -1631,6 +1653,11 @@ nav {
     }
     .footer-review-card:nth-child(2) {
        display: none;
+    }
+    .see-all-footer-reviews {
+        margin-left: 0px;
+       width: 100%;
+       text-align: center;
     }
     /*footer-shared*/
     .host-section {

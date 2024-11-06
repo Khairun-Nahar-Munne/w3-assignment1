@@ -16,7 +16,7 @@ A modern, responsive vacation rental property website showcasing a stunning beac
 
 ## Installation
 
-Follow this step to install and run the project locally.
+Follow this step to clone the project.
 
 ```bash
  git clone https://github.com/Khairun-Nahar-Munne/w3-assignment1.git
